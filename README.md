@@ -87,6 +87,4 @@ php trilha-enum-interface/EnumZoom.php
 
 ## Stack
 
-<img src="https://skillicons.dev/icons?i=php" height="42" alt="PHP"/>
-<img src="https://skillicons.dev/icons?i=git" height="42" alt="Git"/>
-<img src="https://skillicons.dev/icons?i=github" height="42" alt="GitHub"/>
+<img src="https://skillicons.dev/icons?i=php" height="42" alt="PHP"/> <img src="https://skillicons.dev/icons?i=git" height="42" alt="Git"/> <img src="https://skillicons.dev/icons?i=github" height="42" alt="GitHub"/>
