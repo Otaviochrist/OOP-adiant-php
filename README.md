@@ -22,11 +22,11 @@ Cada exercício reforça um conceito antes de avançar para o próximo, seguindo
 - **Trilha herança → abstração** (pasta `trilha-heranca-abstracao/`):
   - **Herança + protected:** `ContaPoupanca extends Conta` usa `$saldo` da mãe. Arquivo: `trilha-heranca-abstracao/Heranca.php`.
   - **Polimorfismo:** mesmo `taxa()` em duas filhas; `foreach` numa lista de `Conta`. Arquivo: `trilha-heranca-abstracao/Polimorfismo.php`.
-  - **Abstração + require_once:** `abstract class Conta`; filhas em arquivos separados. Pasta: `trilha-heranca-abstracao/` (`Conta.php`, `ContaCorrente.php`, `ContaPoupanca.php`, `Abstracao.php`).
+  - **Abstração + require_once:** `abstract class Conta` (não dá `new Conta`); filhas implementam `taxa(): float` em arquivos separados e o script soma as taxas. Arquivos: `Conta.php`, `ContaCorrente.php`, `ContaPoupanca.php`, `Abstracao.php`.
 
 ### Como usar
 1. Execute qualquer arquivo com `php nome-do-arquivo.php`
-2. Trilha de herança: `php trilha-heranca-abstracao/Heranca.php`
+2. Trilha: `php trilha-heranca-abstracao/Heranca.php`, depois `Polimorfismo.php` e `Abstracao.php`
 3. Ou coloque no htdocs e abra pelo navegador
 
 ### O que aprendi desenvolvendo este projeto
@@ -47,7 +47,9 @@ Cada exercício reforça um conceito antes de avançar para o próximo, seguindo
 - Herança (`extends`) e visibilidade `protected` (filha acessa; código de fora não)
 - Polimorfismo: o tipo da variável é a mãe, o objeto na memória é a filha
 - Classe abstrata (`abstract class` / `abstract function`): contrato da mãe, `new` só nas filhas
-- `require_once` para carregar outra classe; se o arquivo faltar, o PHP para (`include_once` só avisa)
+- A filha tem que repetir a assinatura do método abstrato (`taxa(): float`) e dar `return`
+- `require_once` + `__DIR__` para carregar a classe na pasta do arquivo; se faltar, o PHP para (`include_once` só avisa)
+- No Adianti, o model concreto `extends TRecord`; você não instancia a classe base como cadastro
 
 ### Tecnologias
 - PHP 8+
@@ -73,11 +75,11 @@ Each exercise reinforces one concept before moving to the next, following the fr
 - **Inheritance → abstraction trail** (folder `trilha-heranca-abstracao/`):
   - **Inheritance + protected:** `ContaPoupanca extends Conta` uses the parent's `$saldo`. File: `trilha-heranca-abstracao/Heranca.php`.
   - **Polymorphism:** the same `taxa()` on two children; `foreach` over a `Conta` list. File: `trilha-heranca-abstracao/Polimorfismo.php`.
-  - **Abstraction + require_once:** `abstract class Conta`; subclasses in separate files. Folder: `trilha-heranca-abstracao/` (`Conta.php`, `ContaCorrente.php`, `ContaPoupanca.php`, `Abstracao.php`).
+  - **Abstraction + require_once:** `abstract class Conta` (no `new Conta`); children implement `taxa(): float` in separate files and the script sums the fees. Files: `Conta.php`, `ContaCorrente.php`, `ContaPoupanca.php`, `Abstracao.php`.
 
 ### How to use
 1. Run any file with `php file-name.php`
-2. Inheritance trail: `php trilha-heranca-abstracao/Heranca.php`
+2. Trail: `php trilha-heranca-abstracao/Heranca.php`, then `Polimorfismo.php` and `Abstracao.php`
 3. Or drop it into htdocs and open it in the browser
 
 ### What I learned building this project
@@ -98,7 +100,9 @@ Each exercise reinforces one concept before moving to the next, following the fr
 - Inheritance (`extends`) and `protected` visibility (child can access; outside code cannot)
 - Polymorphism: the variable's type is the parent, the object in memory is the child
 - Abstract class (`abstract class` / `abstract function`): parent contract, `new` only on children
-- `require_once` to load another class; missing file stops PHP (`include_once` only warns)
+- The child must match the abstract method signature (`taxa(): float`) and `return` a value
+- `require_once` + `__DIR__` to load a class from the script's folder; missing file stops PHP (`include_once` only warns)
+- In Adianti, a concrete model `extends TRecord`; you do not instantiate the base class as your record
 
 ### Tech stack
 - PHP 8+
