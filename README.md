@@ -40,18 +40,6 @@ php trilha-heranca-abstracao/Heranca.php
 php trilha-enum-interface/EnumZoom.php
 ```
 
-<details>
-<summary>🇺🇸 English version</summary>
-<br>
-
-```bash
-php fundamentos/ContaBancaria.php
-php trilha-heranca-abstracao/Heranca.php
-php trilha-enum-interface/EnumZoom.php
-```
-
-</details>
-
 <br>
 
 ## Exercícios
