@@ -35,7 +35,7 @@ Hands-on OOP drills on the CLI, following the PHP course toward Adianti. No fram
 ## Como rodar
 
 ```bash
-php nome-do-arquivo.php
+php fundamentos/ContaBancaria.php
 php trilha-heranca-abstracao/Heranca.php
 php trilha-enum-interface/EnumZoom.php
 ```
@@ -45,7 +45,7 @@ php trilha-enum-interface/EnumZoom.php
 <br>
 
 ```bash
-php file-name.php
+php fundamentos/ContaBancaria.php
 php trilha-heranca-abstracao/Heranca.php
 php trilha-enum-interface/EnumZoom.php
 ```
@@ -56,11 +56,11 @@ php trilha-enum-interface/EnumZoom.php
 
 ## Exercícios
 
-**Fundamentos** (raiz do repo)
+**Fundamentos** — [`fundamentos/`](fundamentos/)
 
 `PrimeiraClasse.php` · `MaioridadeClasses.php` · `ClassesPrivate.php` · `ContaBancaria.php` · `PromocaoConstrutor.php` · `StdClassExemplo.php`
 
-**Relações**
+**Relações** — [`relacoes/`](relacoes/)
 
 `Associacao.php` · `Agregacao.php` · `Composicao.php`
 
@@ -75,9 +75,9 @@ php trilha-enum-interface/EnumZoom.php
 <summary>🇺🇸 English version</summary>
 <br>
 
-**Basics** — class, majority check, `private`, bank account, constructor promotion, `stdClass`.
+**Basics** — [`fundamentos/`](fundamentos/) — class, majority check, `private`, bank account, constructor promotion, `stdClass`.
 
-**Relationships** — association, aggregation, composition.
+**Relationships** — [`relacoes/`](relacoes/) — association, aggregation, composition.
 
 **Trails** — inheritance → abstraction; enum → interface → asymmetric visibility.
 
