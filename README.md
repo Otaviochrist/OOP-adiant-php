@@ -40,6 +40,18 @@ php trilha-heranca-abstracao/Heranca.php
 php trilha-enum-interface/EnumZoom.php
 ```
 
+<details>
+<summary>🇺🇸 English version</summary>
+<br>
+
+```bash
+php fundamentos/ContaBancaria.php
+php trilha-heranca-abstracao/Heranca.php
+php trilha-enum-interface/EnumZoom.php
+```
+
+</details>
+
 <br>
 
 ## Exercícios
@@ -57,7 +69,7 @@ php trilha-enum-interface/EnumZoom.php
 | Pasta | Níveis |
 | --- | --- |
 | [`trilha-heranca-abstracao/`](trilha-heranca-abstracao/) | herança + `protected` → polimorfismo → classe abstrata + `require_once` |
-| [`trilha-enum-interface/`](trilha-enum-interface/) | enum `ZoomMode` → interface → visibilidade assimétrica (`public private(set)`, PHP 8.4+) |
+| [`trilha-enum-interface/`](trilha-enum-interface/) | enum `ZoomMode` → interface `TemValor` (Despesas só aceita quem tem valor) → visibilidade assimétrica (`public private(set)`) |
 
 <details>
 <summary>🇺🇸 English version</summary>
@@ -67,7 +79,7 @@ php trilha-enum-interface/EnumZoom.php
 
 **Relationships** — [`relacoes/`](relacoes/) — association, aggregation, composition.
 
-**Trails** — inheritance → abstraction; enum → interface → asymmetric visibility.
+**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility.
 
 </details>
 
@@ -75,4 +87,6 @@ php trilha-enum-interface/EnumZoom.php
 
 ## Stack
 
-<img src="https://skillicons.dev/icons?i=php" height="42" alt="PHP"/> <img src="https://skillicons.dev/icons?i=git" height="42" alt="Git"/> <img src="https://skillicons.dev/icons?i=github" height="42" alt="GitHub"/>
+<img src="https://skillicons.dev/icons?i=php" height="42" alt="PHP"/>
+<img src="https://skillicons.dev/icons?i=git" height="42" alt="Git"/>
+<img src="https://skillicons.dev/icons?i=github" height="42" alt="GitHub"/>
