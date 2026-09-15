@@ -3,14 +3,14 @@
 # OOP em PHP · Adianti
 
 [![PHP](https://img.shields.io/badge/PHP-8.5-8866C4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
-[![Progresso](https://img.shields.io/badge/Módulo-2%20%2F%208-8866C4?style=for-the-badge)](#exercícios)
+[![Progresso](https://img.shields.io/badge/Módulo-3%20%2F%208-8866C4?style=for-the-badge)](#exercícios)
 [![Adianti](https://img.shields.io/badge/Adianti-Framework-8866C4?style=for-the-badge)](https://www.adianti.com.br/)
 
 <br>
 
 Caderno de exercícios de **Orientação a Objetos em PHP**, preparação para o Adianti Framework.
 
-> *Um conceito por vez — do `new` até `enum`, `interface` e visibilidade assimétrica.*
+> *Um conceito por vez — do `new` até `enum`, `interface`, Adapter e Facade.*
 
 </div>
 
@@ -18,15 +18,13 @@ Caderno de exercícios de **Orientação a Objetos em PHP**, preparação para o
 
 ## Sobre
 
-Exercícios práticos no terminal (`php arquivo.php`), no ritmo do curso de POO. Ainda **sem** o framework no código: o foco é classe, visibilidade, relações entre objetos, herança, polimorfismo, abstração, enum e interface.
-
-Quando o Módulo 3 começar, este README ganha um grupo novo na lista — não um diário por aula.
+Exercícios práticos no terminal (`php arquivo.php`), no ritmo do curso de POO. Ainda **sem** o framework no código: foco é classe, visibilidade, relações entre objetos, herança, polimorfismo, abstração, enum, interface e padrões (Adapter, Facade).
 
 <details>
 <summary>🇺🇸 English version</summary>
 <br>
 
-Hands-on OOP drills on the CLI, following the PHP course toward Adianti. No framework in the code yet — classes, visibility, object relationships, inheritance, polymorphism, abstraction, enums, and interfaces.
+Hands-on OOP drills on the CLI, following the PHP course toward Adianti. No framework in the code yet — classes, visibility, object relationships, inheritance, polymorphism, abstraction, enums, interfaces, Adapter, and Facade.
 
 </details>
 
@@ -38,19 +36,10 @@ Hands-on OOP drills on the CLI, following the PHP course toward Adianti. No fram
 php fundamentos/ContaBancaria.php
 php trilha-heranca-abstracao/Heranca.php
 php trilha-enum-interface/EnumZoom.php
+php trilha-facade-adapter/Adapter.php
+php trilha-facade-adapter/AdapterCentavos.php
+php trilha-facade-adapter/Facade.php
 ```
-
-<details>
-<summary>🇺🇸 English version</summary>
-<br>
-
-```bash
-php fundamentos/ContaBancaria.php
-php trilha-heranca-abstracao/Heranca.php
-php trilha-enum-interface/EnumZoom.php
-```
-
-</details>
 
 <br>
 
@@ -70,6 +59,7 @@ php trilha-enum-interface/EnumZoom.php
 | --- | --- |
 | [`trilha-heranca-abstracao/`](trilha-heranca-abstracao/) | herança + `protected` → polimorfismo → classe abstrata + `require_once` |
 | [`trilha-enum-interface/`](trilha-enum-interface/) | enum `ZoomMode` → interface `TemValor` (Despesas só aceita quem tem valor) → visibilidade assimétrica (`public private(set)`) |
+| [`trilha-facade-adapter/`](trilha-facade-adapter/) | Adapter (tomada 110→220) → Adapter (centavos→reais) → Facade (`PacoteViagem` esconde passagem + hotel + seguro) |
 
 <details>
 <summary>🇺🇸 English version</summary>
@@ -79,7 +69,7 @@ php trilha-enum-interface/EnumZoom.php
 
 **Relationships** — [`relacoes/`](relacoes/) — association, aggregation, composition.
 
-**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility.
+**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility; Adapter → Facade.
 
 </details>
 
@@ -87,6 +77,4 @@ php trilha-enum-interface/EnumZoom.php
 
 ## Stack
 
-<img src="https://skillicons.dev/icons?i=php" height="42" alt="PHP"/>
-<img src="https://skillicons.dev/icons?i=git" height="42" alt="Git"/>
-<img src="https://skillicons.dev/icons?i=github" height="42" alt="GitHub"/>
+<img src="https://skillicons.dev/icons?i=php" height="42" alt="PHP"/> <img src="https://skillicons.dev/icons?i=git" height="42" alt="Git"/> <img src="https://skillicons.dev/icons?i=github" height="42" alt="GitHub"/>
