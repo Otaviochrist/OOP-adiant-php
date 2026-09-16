@@ -10,7 +10,7 @@
 
 Caderno de exercícios de **Orientação a Objetos em PHP**, preparação para o Adianti Framework.
 
-> *Um conceito por vez — do `new` até `enum`, `interface`, Adapter e Facade.*
+> *Um conceito por vez — do `new` até `enum`, `interface`, Adapter, Facade e SQL no terminal.*
 
 </div>
 
@@ -18,13 +18,13 @@ Caderno de exercícios de **Orientação a Objetos em PHP**, preparação para o
 
 ## Sobre
 
-Exercícios práticos no terminal (`php arquivo.php`), no ritmo do curso de POO. Ainda **sem** o framework no código: foco é classe, visibilidade, relações entre objetos, herança, polimorfismo, abstração, enum, interface e padrões (Adapter, Facade).
+Exercícios práticos no terminal (`php arquivo.php`), no ritmo do curso de POO. Ainda **sem** o framework no código: classe, visibilidade, relações, herança, polimorfismo, abstração, enum, interface, padrões (Adapter, Facade) e SQL (SQLite + PDO) antes do HTML do módulo 3.
 
 <details>
 <summary>🇺🇸 English version</summary>
 <br>
 
-Hands-on OOP drills on the CLI, following the PHP course toward Adianti. No framework in the code yet — classes, visibility, object relationships, inheritance, polymorphism, abstraction, enums, interfaces, Adapter, and Facade.
+Hands-on OOP drills on the CLI, following the PHP course toward Adianti. No framework yet — classes, visibility, relationships, inheritance, polymorphism, abstraction, enums, interfaces, Adapter, Facade, and terminal SQL (SQLite + PDO).
 
 </details>
 
@@ -39,6 +39,8 @@ php trilha-enum-interface/EnumZoom.php
 php trilha-facade-adapter/Adapter.php
 php trilha-facade-adapter/AdapterCentavos.php
 php trilha-facade-adapter/Facade.php
+php pratica-sql/criar.php
+php pratica-sql/listar.php
 ```
 
 <br>
@@ -60,6 +62,7 @@ php trilha-facade-adapter/Facade.php
 | [`trilha-heranca-abstracao/`](trilha-heranca-abstracao/) | herança + `protected` → polimorfismo → classe abstrata + `require_once` |
 | [`trilha-enum-interface/`](trilha-enum-interface/) | enum `ZoomMode` → interface `TemValor` (Despesas só aceita quem tem valor) → visibilidade assimétrica (`public private(set)`) |
 | [`trilha-facade-adapter/`](trilha-facade-adapter/) | Adapter (tomada 110→220) → Adapter (centavos→reais) → Facade (`PacoteViagem` esconde passagem + hotel + seguro) |
+| [`pratica-sql/`](pratica-sql/) | SQLite + PDO, um script por ação: `CREATE` → `INSERT` → `SELECT` → `UPDATE` → `DELETE` (sem HTML) |
 
 <details>
 <summary>🇺🇸 English version</summary>
@@ -69,7 +72,7 @@ php trilha-facade-adapter/Facade.php
 
 **Relationships** — [`relacoes/`](relacoes/) — association, aggregation, composition.
 
-**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility; Adapter → Facade.
+**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility; Adapter → Facade; SQL CRUD on SQLite.
 
 </details>
 
