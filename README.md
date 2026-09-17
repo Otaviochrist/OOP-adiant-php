@@ -10,7 +10,7 @@
 
 Caderno de exercícios de **Orientação a Objetos em PHP**, preparação para o Adianti Framework.
 
-> *Um conceito por vez — do `new` até `enum`, `interface`, Adapter, Facade e SQL no terminal.*
+> *Um conceito por vez — do `new` até `enum`, `interface`, Adapter, Facade, SQL no terminal e o cadastro HTML do módulo 3.*
 
 </div>
 
@@ -18,13 +18,13 @@ Caderno de exercícios de **Orientação a Objetos em PHP**, preparação para o
 
 ## Sobre
 
-Exercícios práticos no terminal (`php arquivo.php`), no ritmo do curso de POO. Ainda **sem** o framework no código: classe, visibilidade, relações, herança, polimorfismo, abstração, enum, interface, padrões (Adapter, Facade) e SQL (SQLite + PDO) antes do HTML do módulo 3.
+Exercícios práticos no ritmo do curso de POO. Ainda **sem** o framework no código: classe, visibilidade, relações, herança, polimorfismo, abstração, enum, interface, padrões (Adapter, Facade), SQL (SQLite + PDO) e o **módulo 3** (PHP + HTML + Postgres, um script por ação no nível 1).
 
 <details>
 <summary>🇺🇸 English version</summary>
 <br>
 
-Hands-on OOP drills on the CLI, following the PHP course toward Adianti. No framework yet — classes, visibility, relationships, inheritance, polymorphism, abstraction, enums, interfaces, Adapter, Facade, and terminal SQL (SQLite + PDO).
+Hands-on OOP drills following the PHP course toward Adianti. No framework yet — classes, visibility, relationships, inheritance, polymorphism, abstraction, enums, interfaces, Adapter, Facade, terminal SQL (SQLite + PDO), and module 3 (HTML form + Postgres).
 
 </details>
 
@@ -42,6 +42,15 @@ php trilha-facade-adapter/Facade.php
 php pratica-sql/criar.php
 php pratica-sql/listar.php
 ```
+
+Cadastro do módulo 3 (navegador). Copie `modulo-3/nivel-1/db.exemplo.php` para `db.php` e preencha o Postgres. O `db.php` **não** vai no Git.
+
+```bash
+cd modulo-3/nivel-1
+php -S localhost:8000
+```
+
+Abra `http://localhost:8000/pessoa_form_insert.php`.
 
 <br>
 
@@ -63,6 +72,7 @@ php pratica-sql/listar.php
 | [`trilha-enum-interface/`](trilha-enum-interface/) | enum `ZoomMode` → interface `TemValor` (Despesas só aceita quem tem valor) → visibilidade assimétrica (`public private(set)`) |
 | [`trilha-facade-adapter/`](trilha-facade-adapter/) | Adapter (tomada 110→220) → Adapter (centavos→reais) → Facade (`PacoteViagem` esconde passagem + hotel + seguro) |
 | [`pratica-sql/`](pratica-sql/) | SQLite + PDO, um script por ação: `CREATE` → `INSERT` → `SELECT` → `UPDATE` → `DELETE` (sem HTML) |
+| [`modulo-3/`](modulo-3/) | 7 etapas até OO. **Nível 1** (3.3.1): cadastro de pessoa — form, CSS, combo de cidade, save (`INSERT`). Níveis 2–7: pasta + `ETAPA.txt` até o vídeo |
 
 <details>
 <summary>🇺🇸 English version</summary>
@@ -72,7 +82,7 @@ php pratica-sql/listar.php
 
 **Relationships** — [`relacoes/`](relacoes/) — association, aggregation, composition.
 
-**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility; Adapter → Facade; SQL CRUD on SQLite.
+**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility; Adapter → Facade; SQL CRUD on SQLite; module 3 level 1 person form (HTML + Postgres).
 
 </details>
 
