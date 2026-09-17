@@ -1,0 +1,1 @@
+Etapa 3 — HTML em arquivos template, separados da lógica PHP.
