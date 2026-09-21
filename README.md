@@ -90,4 +90,4 @@ Abra `http://localhost:8000/pessoa_list.php` (lista, editar, excluir, inserir).
 
 ## Stack
 
-<img src="https://skillicons.dev/icons?i=php" height="42" alt="PHP"/> <img src="https://skillicons.dev/icons?i=git" height="42" alt="Git"/> <img src="https://skillicons.dev/icons?i=github" height="42" alt="GitHub"/>
+<img src="https://skillicons.dev/icons?i=php,html,css,postgres,sqlite,git,github" height="42" alt="PHP, HTML, CSS, Postgres, SQLite, Git, GitHub"/>
