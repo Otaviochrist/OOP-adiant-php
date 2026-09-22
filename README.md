@@ -18,7 +18,7 @@ Caderno de exercícios de **Orientação a Objetos em PHP**, preparação para o
 
 ## Sobre
 
-Exercícios práticos no ritmo do curso de POO. Ainda **sem** o framework no código: classe, visibilidade, relações, herança, polimorfismo, abstração, enum, interface, padrões (Adapter, Facade), SQL (SQLite + PDO) e o **módulo 3** (PHP + HTML + Postgres: cadastro, lista, edição e exclusão no nível 1).
+Exercícios práticos no ritmo do curso de POO. Ainda **sem** o framework no código: classe, visibilidade, relações, herança, polimorfismo, abstração, enum, interface, padrões (Adapter, Facade), SQL (SQLite + PDO) e o **módulo 3** (PHP + HTML + Postgres: CRUD no nível 1 em vários scripts; nível 2 junta ações em menos arquivos).
 
 <details>
 <summary>🇺🇸 English version</summary>
@@ -43,14 +43,16 @@ php pratica-sql/criar.php
 php pratica-sql/listar.php
 ```
 
-Cadastro do módulo 3 (navegador). Copie `modulo-3/nivel-1/db.exemplo.php` para `db.php` e preencha o Postgres. O `db.php` **não** vai no Git.
+Cadastro do módulo 3 (navegador). Copie `modulo-3/nivel-1/db.exemplo.php` para `db.php` e preencha o Postgres. O `db.php` **não** vai no Git. O nível 2 reusa esse arquivo (`require` do `nivel-1`).
+
+Na **raiz** do projeto:
 
 ```bash
-cd modulo-3/nivel-1
 php -S localhost:8000
 ```
 
-Abra `http://localhost:8000/pessoa_list.php` (lista, editar, excluir, inserir).
+- Nível 1 (um script por ação): `http://localhost:8000/modulo-3/nivel-1/pessoa_list.php`
+- Nível 2 (form + lista): `http://localhost:8000/modulo-3/nivel-2/pessoa_list.php`
 
 <br>
 
@@ -72,7 +74,7 @@ Abra `http://localhost:8000/pessoa_list.php` (lista, editar, excluir, inserir).
 | [`trilha-enum-interface/`](trilha-enum-interface/) | enum `ZoomMode` → interface `TemValor` (Despesas só aceita quem tem valor) → visibilidade assimétrica (`public private(set)`) |
 | [`trilha-facade-adapter/`](trilha-facade-adapter/) | Adapter (tomada 110→220) → Adapter (centavos→reais) → Facade (`PacoteViagem` esconde passagem + hotel + seguro) |
 | [`pratica-sql/`](pratica-sql/) | SQLite + PDO, um script por ação: `CREATE` → `INSERT` → `SELECT` → `UPDATE` → `DELETE` (sem HTML) |
-| [`modulo-3/`](modulo-3/) | 7 etapas até OO. **Nível 1**: pessoa em scripts separados — form + `INSERT`, lista, combo com `selected`, `UPDATE`, `DELETE`. Níveis 2–7: pasta + `ETAPA.txt` até o vídeo |
+| [`modulo-3/`](modulo-3/) | 7 etapas até OO. **Nível 1**: um script por ação (insert, update, lista, delete). **Nível 2**: `pessoa_form.php` (inserir+editar) e `pessoa_list.php` (listar+excluir+reset via `?action=`). Níveis 3–7: pasta + `ETAPA.txt` até o vídeo |
 
 <details>
 <summary>🇺🇸 English version</summary>
@@ -82,7 +84,7 @@ Abra `http://localhost:8000/pessoa_list.php` (lista, editar, excluir, inserir).
 
 **Relationships** — [`relacoes/`](relacoes/) — association, aggregation, composition.
 
-**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility; Adapter → Facade; SQL CRUD on SQLite; module 3 level 1 person CRUD (HTML + Postgres).
+**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility; Adapter → Facade; SQL CRUD on SQLite; module 3 person CRUD (HTML + Postgres): level 1 separate scripts, level 2 fewer files (`?id=` / `?action=`).
 
 </details>
 
