@@ -18,13 +18,13 @@ Caderno de exercícios de **Orientação a Objetos em PHP**, preparação para o
 
 ## Sobre
 
-Exercícios práticos no ritmo do curso de POO. Ainda **sem** o framework no código: classe, visibilidade, relações, herança, polimorfismo, abstração, enum, interface, padrões (Adapter, Facade), SQL (SQLite + PDO) e o **módulo 3** (PHP + HTML + Postgres: CRUD no nível 1 em vários scripts; nível 2 junta ações; nível 3 separa o HTML em templates).
+Exercícios práticos no ritmo do curso de POO. Ainda **sem** o framework no código: classe, visibilidade, relações, herança, polimorfismo, abstração, enum, interface, padrões (Adapter, Facade), SQL (SQLite + PDO) e o **módulo 3** (PHP + HTML + Postgres: CRUD no nível 1 em vários scripts; nível 2 junta ações; nível 3 separa o HTML em templates; nível 4 tira o SQL da página e deixa em funções).
 
 <details>
 <summary>🇺🇸 English version</summary>
 <br>
 
-Hands-on OOP drills following the PHP course toward Adianti. No framework yet — classes, visibility, relationships, inheritance, polymorphism, abstraction, enums, interfaces, Adapter, Facade, terminal SQL (SQLite + PDO), and module 3 (HTML CRUD + Postgres).
+Hands-on OOP drills following the PHP course toward Adianti. No framework yet — classes, visibility, relationships, inheritance, polymorphism, abstraction, enums, interfaces, Adapter, Facade, terminal SQL (SQLite + PDO), and module 3 (HTML CRUD + Postgres, with SQL moved into functions at level 4).
 
 </details>
 
@@ -43,7 +43,7 @@ php pratica-sql/criar.php
 php pratica-sql/listar.php
 ```
 
-Cadastro do módulo 3 (navegador). Copie `modulo-3/nivel-1/db.exemplo.php` para `db.php` e preencha o Postgres. O `db.php` **não** vai no Git. Os níveis 2 e 3 reusam esse arquivo (`require` do `nivel-1`).
+Cadastro do módulo 3 (navegador). Copie `modulo-3/nivel-1/db.exemplo.php` para `db.php` e preencha o Postgres. O `db.php` **não** vai no Git. Os níveis 2, 3 e 4 reusam esse arquivo (`require` do `nivel-1`).
 
 Na **raiz** do projeto:
 
@@ -54,6 +54,7 @@ php -S localhost:8000
 - Nível 1 (um script por ação): `http://localhost:8000/modulo-3/nivel-1/pessoa_list.php`
 - Nível 2 (form + lista): `http://localhost:8000/modulo-3/nivel-2/pessoa_list.php`
 - Nível 3 (HTML em template): `http://localhost:8000/modulo-3/nivel-3/pessoa_list.php`
+- Nível 4 (SQL em funções): `http://localhost:8000/modulo-3/nivel-4/pessoa_list.php`
 
 <br>
 
@@ -75,7 +76,7 @@ php -S localhost:8000
 | [`trilha-enum-interface/`](trilha-enum-interface/) | enum `ZoomMode` → interface `TemValor` (Despesas só aceita quem tem valor) → visibilidade assimétrica (`public private(set)`) |
 | [`trilha-facade-adapter/`](trilha-facade-adapter/) | Adapter (tomada 110→220) → Adapter (centavos→reais) → Facade (`PacoteViagem` esconde passagem + hotel + seguro) |
 | [`pratica-sql/`](pratica-sql/) | SQLite + PDO, um script por ação: `CREATE` → `INSERT` → `SELECT` → `UPDATE` → `DELETE` (sem HTML) |
-| [`modulo-3/`](modulo-3/) | 7 etapas até OO. **Nível 1**: um script por ação. **Nível 2**: `pessoa_form.php` (inserir+editar) e `pessoa_list.php` (listar+excluir+reset via `?action=`). **Nível 3**: o mesmo fluxo, com HTML fora do PHP (`html/list.html`, `html/item.html`, `html/form.html`) e `str_replace` nas marcas `{nome}`, `{itens}`, `{cidades}`. Níveis 4–7: pasta + `ETAPA.txt` até o vídeo |
+| [`modulo-3/`](modulo-3/) | 7 etapas até OO. **Nível 1**: um script por ação. **Nível 2**: `pessoa_form.php` (inserir+editar) e `pessoa_list.php` (listar+excluir+reset via `?action=`). **Nível 3**: o mesmo fluxo, com HTML fora do PHP (`html/list.html`, `html/item.html`, `html/form.html`) e `str_replace` nas marcas `{nome}`, `{itens}`, `{cidades}`. **Nível 4**: o mesmo fluxo e os templates; o SQL sai para `funcoes.php` e a página só chama a função. Níveis 5–7: pasta + `ETAPA.txt` até o vídeo |
 
 <details>
 <summary>🇺🇸 English version</summary>
@@ -85,7 +86,7 @@ php -S localhost:8000
 
 **Relationships** — [`relacoes/`](relacoes/) — association, aggregation, composition.
 
-**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility; Adapter → Facade; SQL CRUD on SQLite; module 3 person CRUD (HTML + Postgres): level 1 separate scripts, level 2 fewer files (`?id=` / `?action=`), level 3 HTML templates with `str_replace`.
+**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility; Adapter → Facade; SQL CRUD on SQLite; module 3 person CRUD (HTML + Postgres): level 1 separate scripts, level 2 fewer files (`?id=` / `?action=`), level 3 HTML templates with `str_replace`, level 4 SQL in functions (`funcoes.php`).
 
 </details>
 
