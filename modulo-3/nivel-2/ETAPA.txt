@@ -1,2 +1,0 @@
-Etapa 2 — menos scripts: incluir+editar juntos; listar+excluir juntos.
-Ainda não copie código da etapa 1 para cá até o vídeo 3.4 (ou equivalente).
