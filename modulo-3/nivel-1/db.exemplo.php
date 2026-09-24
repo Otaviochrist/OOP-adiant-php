@@ -2,7 +2,9 @@
 // Copie este arquivo para db.php e preencha user, senha, host e banco.
 // O db.php não vai para o GitHub.
 
+try {
 $con = new PDO('pgsql:dbname=exercicios;user=SEU_USUARIO;password=SUA_SENHA;host=127.0.0.1;port=5432');
+$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $con->exec("CREATE TABLE IF NOT EXISTS pessoa (
     id integer PRIMARY KEY,
@@ -18,3 +20,7 @@ $con->exec("CREATE TABLE IF NOT EXISTS cidade (
     id integer PRIMARY KEY,
     nome varchar(50)
 )");
+} catch (PDOException $e) {
+    print 'Erro de banco: ' . $e->getMessage();
+    exit;
+  }
