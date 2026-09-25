@@ -1,1 +1,0 @@
-Etapa 6 — conexão sem senha no meio do script; prepared statements.

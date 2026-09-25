@@ -18,13 +18,13 @@ Caderno de exercícios de **Orientação a Objetos em PHP**, preparação para o
 
 ## Sobre
 
-Exercícios práticos no ritmo do curso de POO. Ainda **sem** o framework no código: classe, visibilidade, relações, herança, polimorfismo, abstração, enum, interface, padrões (Adapter, Facade), SQL (SQLite + PDO) e o **módulo 3** (PHP + HTML + Postgres: CRUD no nível 1 em vários scripts; nível 2 junta ações; nível 3 separa o HTML em templates; nível 4 tira o SQL da página e deixa em funções; nível 5 junta essas funções na classe `Pessoa`).
+Exercícios práticos no ritmo do curso de POO. Ainda **sem** o framework no código: classe, visibilidade, relações, herança, polimorfismo, abstração, enum, interface, padrões (Adapter, Facade), SQL (SQLite + PDO) e o **módulo 3** (PHP + HTML + Postgres: CRUD no nível 1 em vários scripts; nível 2 junta ações; nível 3 separa o HTML em templates; nível 4 tira o SQL da página e deixa em funções; nível 5 junta essas funções na classe `Pessoa`; nível 6 lê a conexão num `.ini` e usa prepared statements).
 
 <details>
 <summary>🇺🇸 English version</summary>
 <br>
 
-Hands-on OOP drills following the PHP course toward Adianti. No framework yet — classes, visibility, relationships, inheritance, polymorphism, abstraction, enums, interfaces, Adapter, Facade, terminal SQL (SQLite + PDO), and module 3 (HTML CRUD + Postgres: SQL in functions at level 4, model class `Pessoa` at level 5).
+Hands-on OOP drills following the PHP course toward Adianti. No framework yet — classes, visibility, relationships, inheritance, polymorphism, abstraction, enums, interfaces, Adapter, Facade, terminal SQL (SQLite + PDO), and module 3 (HTML CRUD + Postgres: SQL in functions at level 4, model class `Pessoa` at level 5, INI config + prepared statements at level 6).
 
 </details>
 
@@ -43,7 +43,7 @@ php pratica-sql/criar.php
 php pratica-sql/listar.php
 ```
 
-Cadastro do módulo 3 (navegador). Copie `modulo-3/nivel-1/db.exemplo.php` para `db.php` e preencha o Postgres. O `db.php` **não** vai no Git. Os níveis 2 a 5 reusam esse arquivo (`require` do `nivel-1`). A conexão fica num `try`/`catch` de `PDOException`.
+Cadastro do módulo 3 (navegador). Copie `modulo-3/nivel-1/db.exemplo.php` para `db.php` e preencha o Postgres. O `db.php` **não** vai no Git. Os níveis 2 a 5 reusam esse arquivo (`require` do `nivel-1`). A conexão fica num `try`/`catch` de `PDOException`. No nível 6, copie `modulo-3/nivel-6/config/livro.exemplo.ini` para `livro.ini`; esse arquivo também **não** vai no Git.
 
 Na **raiz** do projeto:
 
@@ -56,6 +56,7 @@ php -S localhost:8000
 - Nível 3 (HTML em template): `http://localhost:8000/modulo-3/nivel-3/pessoa_list.php`
 - Nível 4 (SQL em funções): `http://localhost:8000/modulo-3/nivel-4/pessoa_list.php`
 - Nível 5 (classe `Pessoa`): `http://localhost:8000/modulo-3/nivel-5/pessoa_list.php`
+- Nível 6 (`.ini` + prepared statements): `http://localhost:8000/modulo-3/nivel-6/pessoa_list.php`
 
 <br>
 
@@ -77,7 +78,7 @@ php -S localhost:8000
 | [`trilha-enum-interface/`](trilha-enum-interface/) | enum `ZoomMode` → interface `TemValor` (Despesas só aceita quem tem valor) → visibilidade assimétrica (`public private(set)`) |
 | [`trilha-facade-adapter/`](trilha-facade-adapter/) | Adapter (tomada 110→220) → Adapter (centavos→reais) → Facade (`PacoteViagem` esconde passagem + hotel + seguro) |
 | [`pratica-sql/`](pratica-sql/) | SQLite + PDO, um script por ação: `CREATE` → `INSERT` → `SELECT` → `UPDATE` → `DELETE` (sem HTML) |
-| [`modulo-3/`](modulo-3/) | 7 etapas até OO. **Nível 1**: um script por ação. **Nível 2**: `pessoa_form.php` (inserir+editar) e `pessoa_list.php` (listar+excluir+reset via `?action=`). **Nível 3**: o mesmo fluxo, com HTML fora do PHP (`html/list.html`, `html/item.html`, `html/form.html`) e `str_replace` nas marcas `{nome}`, `{itens}`, `{cidades}`. **Nível 4**: o mesmo fluxo e os templates; o SQL sai para `funcoes.php` e a página só chama a função. **Nível 5**: essas funções viram métodos `static` da classe `Pessoa` (`Pessoa::getLinhas()` e os demais); a conexão trata `PDOException`. Níveis 6–7: pasta + `ETAPA.txt` até o vídeo |
+| [`modulo-3/`](modulo-3/) | 7 etapas até OO. **Nível 1**: um script por ação. **Nível 2**: `pessoa_form.php` (inserir+editar) e `pessoa_list.php` (listar+excluir+reset via `?action=`). **Nível 3**: o mesmo fluxo, com HTML fora do PHP (`html/list.html`, `html/item.html`, `html/form.html`) e `str_replace` nas marcas `{nome}`, `{itens}`, `{cidades}`. **Nível 4**: o mesmo fluxo e os templates; o SQL sai para `funcoes.php` e a página só chama a função. **Nível 5**: essas funções viram métodos `static` da classe `Pessoa` (`Pessoa::getLinhas()` e os demais); a conexão trata `PDOException`. **Nível 6**: `getConnection()` lê `config/livro.ini`; insert/update/delete/editar usam `prepare`/`execute`. Nível 7: pasta + `ETAPA.txt` até o vídeo |
 
 <details>
 <summary>🇺🇸 English version</summary>
@@ -87,7 +88,7 @@ php -S localhost:8000
 
 **Relationships** — [`relacoes/`](relacoes/) — association, aggregation, composition.
 
-**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility; Adapter → Facade; SQL CRUD on SQLite; module 3 person CRUD (HTML + Postgres): level 1 separate scripts, level 2 fewer files (`?id=` / `?action=`), level 3 HTML templates with `str_replace`, level 4 SQL in functions (`funcoes.php`), level 5 model class `Pessoa` with `PDOException`.
+**Trails** — inheritance → abstraction; enum → `TemValor` + Despesas → asymmetric visibility; Adapter → Facade; SQL CRUD on SQLite; module 3 person CRUD (HTML + Postgres): level 1 separate scripts, level 2 fewer files (`?id=` / `?action=`), level 3 HTML templates with `str_replace`, level 4 SQL in functions (`funcoes.php`), level 5 model class `Pessoa` with `PDOException`, level 6 INI connection + prepared statements.
 
 </details>
 
